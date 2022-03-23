@@ -12,7 +12,7 @@ html {
 body {
 	font-family: 'Barlow', Helvetica, Arial, sans-serif;
 	font-weight: 500;
-	min-height: 100vh;
+	height:200vh;
 	color: #57585c;
 	color: var(--color-text);
 	background-color: #000;
@@ -44,7 +44,7 @@ a:focus {
 }
 
 .hidden {
-	position: absolute;
+	position: fixed;
 	overflow: hidden;
 	width: 0;
 	height: 0;
@@ -75,8 +75,9 @@ a:focus {
 }
 
 main {
-	position: relative;
+	position:relative;
 	width: 100%;
+	
 }
 
 .content {
@@ -86,12 +87,14 @@ main {
 	align-items: center;
 	align-content: center;
 	margin: 0 auto;
-	min-height: 100vh;
+	width: 100%;
+	height: 100vh;
+	
 }
 
 .content--fixed {
 	position: fixed;
-	z-index: 10000;
+	z-index: 100000;
 	top: 0;
 	left: 0;
 	display: grid;
@@ -99,7 +102,7 @@ main {
 	width: 100%;
 	max-width: none;
 	min-height: 0;
-	height: 100vh;
+	
 	padding: 1.5em;
 	pointer-events: none;
 	grid-template-columns: 50% 50%;
@@ -115,7 +118,7 @@ main {
 
 /* Header */
 .codrops-header {
-	position: relative;
+	position: fixed;
 	z-index: 100;
 	display: flex;
 	flex-direction: row;
@@ -139,7 +142,7 @@ main {
 }
 
 .github {
-	display: block;
+	display:block;
 	align-self: end;
 	grid-area: github;
 	justify-self: start;
