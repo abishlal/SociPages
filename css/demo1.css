@@ -193,13 +193,16 @@ src: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/Franklin_Gothic_Heavy
 text-align: right;
 margin-top: -90px;
 margin-right:-90px;
+color:green;
 position: relative;
-visibility:hidden;
-z-index:10;
+/* visibility:hidden; */
+z-index:100000;
 }
 
 svg {
+color:green;
 width: 50%;
+z-index:100000000;
 }
 rect {
 fill: #fff;
@@ -235,6 +238,13 @@ color: white;
 .fa:hover {
 opacity: 0.7;
 }
+
+body{
+    
+  background: #212121;
+
+  }
+
 
 
 /* Style 9
@@ -311,4 +321,19 @@ font-size: 30px;
 color: #70a1ff;
 }
 
+@keyframes text {
+0%{
+    color: #000;
+    margin-bottom: -40px;
+}
+
+30%{
+    letter-spacing: 25px;
+    margin-bottom: -40px;
+}
+
+85%{
+    letter-spacing: 8px;
+    margin-bottom: -40px;
+}
 }
