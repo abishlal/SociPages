@@ -1,56 +1,70 @@
 <!DOCTYPE html>
 <html lang="en" class="no-js">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		
-		<link rel="shortcut icon" href="favicon.ico">
-		<link
-		rel="stylesheet"
-		href="https://unicons.iconscout.com/release/v4.0.0/css/line.css"
-	  />
-		<link href="https://fonts.googleapis.com/css?family=Barlow:400,500,700|Playfair+Display" rel="stylesheet">
-		<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-		<link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/unicons.css"/>
-		<link rel="stylesheet" type="text/css" href="css/base.css" />
-		<link rel="stylesheet" type="text/css" href="css/demo1.css" />
-		<link rel="stylesheet" type="text/css" href="pater/pater.css" />
-		<script>document.documentElement.class="js";var supportsCssVars=function(){var e,t=document.createElement("style");return t.innerHTML="root: { --tmp-var: bold; }",document.head.appendChild(t),e=!!(window.CSS&&window.CSS.supports&&window.CSS.supports("font-weight","var(--tmp-var)")),t.parentNode.removeChild(t),e};supportsCssVars()||alert("Please view this demo in a modern browser that supports CSS Variables.");</script>
-	</head>
-	<body class="demo-1">
-		<svg class="hidden">
-			<symbol id="icon-arrow" viewBox="0 0 24 24">
-				<title>arrow</title>
-				<polygon points="6.3,12.8 20.9,12.8 20.9,11.2 6.3,11.2 10.2,7.2 9,6 3.1,12 9,18 10.2,16.8 "/>
-			</symbol>
-			<symbol id="icon-drop" viewBox="0 0 24 24">
-				<title>drop</title>
-				<path d="M12,21c-3.6,0-6.6-3-6.6-6.6C5.4,11,10.8,4,11.4,3.2C11.6,3.1,11.8,3,12,3s0.4,0.1,0.6,0.3c0.6,0.8,6.1,7.8,6.1,11.2C18.6,18.1,15.6,21,12,21zM12,4.8c-1.8,2.4-5.2,7.4-5.2,9.6c0,2.9,2.3,5.2,5.2,5.2s5.2-2.3,5.2-5.2C17.2,12.2,13.8,7.3,12,4.8z"/><path d="M12,18.2c-0.4,0-0.7-0.3-0.7-0.7s0.3-0.7,0.7-0.7c1.3,0,2.4-1.1,2.4-2.4c0-0.4,0.3-0.7,0.7-0.7c0.4,0,0.7,0.3,0.7,0.7C15.8,16.5,14.1,18.2,12,18.2z"/>
-			</symbol>
-		
-			<symbol id="icon-keyboard" viewBox="0 0 100 70">
-				<title>keyboard</title>
-				<!-- https://thenounproject.com/term/keyboard/783/ by Paul te Kortschot from the Noun Project -->
-				<path d="M 60.94,1.83 39.22,1.83 C 36.71,1.83 34.67,3.86 34.67,6.376 L 34.67,28.1 C 34.67,30.61 36.71,32.65 39.22,32.65 L 60.94,32.65 C 63.45,32.65 65.5,30.61 65.5,28.1 L 65.5,6.376 C 65.5,3.86 63.45,1.83 60.94,1.83 Z M 44.79,18.63 50.08,11.74 55.37,18.63 Z" opacity="0.2"/>
-				<path d="M 60.86,36.75 39.14,36.75 C 36.63,36.75 34.59,38.79 34.59,41.3 L 34.59,63.02 C 34.59,65.53 36.63,67.57 39.14,67.57 L 60.86,67.57 C 63.38,67.57 65.41,65.53 65.41,63.02 L 65.41,41.3 C 65.42,38.79 63.38,36.75 60.86,36.75 Z M 50.08,57.45 44.79,50.55 55.37,50.55 Z" opacity="0.2" />
-				<path d="M 95.45,36.75 73.73,36.75 C 71.22,36.75 69.18,38.79 69.18,41.3 L 69.18,63.02 C 69.18,65.53 71.22,67.57 73.73,67.57 L 95.45,67.57 C 97.97,67.57 100,65.53 100,63.02 L 100,41.3 C 100,38.79 97.97,36.75 95.45,36.75 Z M 83.4,57.45 83.4,46.86 90.3,52.16 Z" />
-				<path d="M 26.27,36.75 4.55,36.75 C 2.037,36.75 0,38.79 0,41.3 L 0,63.02 C 0,65.53 2.037,67.57 4.55,67.57 L 26.27,67.57 C 28.78,67.57 30.82,65.53 30.82,63.02 L 30.82,41.3 C 30.82,38.79 28.78,36.75 26.27,36.75 Z M 16.69,57.45 9.79,52.16 16.69,46.86 Z" />
-			</symbol>
-		</svg>
-		<main>
-			<div class="content content--fixed">
-				<header class="codrops-header">
-					<div class="codrops-links">
-						<a class="codrops-icon codrops-icon--prev" href="index.html" title="Previous Demo"><svg class="icon icon--arrow"><use xlink:href="#icon-arrow"></use></svg></a>
-					</div>
-					<a  href="index.html" class="codrops-header__title">BACK</a>
-				</header>
-			
-<!-- 		 -->
-			</div>
-			<div class="content">
-				<canvas class="scene scene--full" id="scene"></canvas>
-				<script type="x-shader/x-vertex" id="wrapVertexShader">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="shortcut icon" href="favicon.ico">
+	<link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css" />
+	<link href="https://fonts.googleapis.com/css?family=Barlow:400,500,700|Playfair+Display" rel="stylesheet">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+	<link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/unicons.css" />
+	<link rel="stylesheet" type="text/css" href="css/base.css" />
+	<link rel="stylesheet" type="text/css" href="css/demo1.css" />
+	<link rel="stylesheet" type="text/css" href="pater/pater.css" />
+
+	<!--font awsome-->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script>document.documentElement.class = "js"; var supportsCssVars = function () { var e, t = document.createElement("style"); return t.innerHTML = "root: { --tmp-var: bold; }", document.head.appendChild(t), e = !!(window.CSS && window.CSS.supports && window.CSS.supports("font-weight", "var(--tmp-var)")), t.parentNode.removeChild(t), e }; supportsCssVars() || alert("Please view this demo in a modern browser that supports CSS Variables.");</script>
+</head>
+
+<body class="demo-1">
+	<svg class="hidden">
+		<symbol id="icon-arrow" viewBox="0 0 24 24">
+			<title>arrow</title>
+			<polygon points="6.3,12.8 20.9,12.8 20.9,11.2 6.3,11.2 10.2,7.2 9,6 3.1,12 9,18 10.2,16.8 " />
+		</symbol>
+		<symbol id="icon-drop" viewBox="0 0 24 24">
+			<title>drop</title>
+			<path
+				d="M12,21c-3.6,0-6.6-3-6.6-6.6C5.4,11,10.8,4,11.4,3.2C11.6,3.1,11.8,3,12,3s0.4,0.1,0.6,0.3c0.6,0.8,6.1,7.8,6.1,11.2C18.6,18.1,15.6,21,12,21zM12,4.8c-1.8,2.4-5.2,7.4-5.2,9.6c0,2.9,2.3,5.2,5.2,5.2s5.2-2.3,5.2-5.2C17.2,12.2,13.8,7.3,12,4.8z" />
+			<path
+				d="M12,18.2c-0.4,0-0.7-0.3-0.7-0.7s0.3-0.7,0.7-0.7c1.3,0,2.4-1.1,2.4-2.4c0-0.4,0.3-0.7,0.7-0.7c0.4,0,0.7,0.3,0.7,0.7C15.8,16.5,14.1,18.2,12,18.2z" />
+		</symbol>
+
+		<symbol id="icon-keyboard" viewBox="0 0 100 70">
+			<title>keyboard</title>
+			<!-- https://thenounproject.com/term/keyboard/783/ by Paul te Kortschot from the Noun Project -->
+			<path
+				d="M 60.94,1.83 39.22,1.83 C 36.71,1.83 34.67,3.86 34.67,6.376 L 34.67,28.1 C 34.67,30.61 36.71,32.65 39.22,32.65 L 60.94,32.65 C 63.45,32.65 65.5,30.61 65.5,28.1 L 65.5,6.376 C 65.5,3.86 63.45,1.83 60.94,1.83 Z M 44.79,18.63 50.08,11.74 55.37,18.63 Z"
+				opacity="0.2" />
+			<path
+				d="M 60.86,36.75 39.14,36.75 C 36.63,36.75 34.59,38.79 34.59,41.3 L 34.59,63.02 C 34.59,65.53 36.63,67.57 39.14,67.57 L 60.86,67.57 C 63.38,67.57 65.41,65.53 65.41,63.02 L 65.41,41.3 C 65.42,38.79 63.38,36.75 60.86,36.75 Z M 50.08,57.45 44.79,50.55 55.37,50.55 Z"
+				opacity="0.2" />
+			<path
+				d="M 95.45,36.75 73.73,36.75 C 71.22,36.75 69.18,38.79 69.18,41.3 L 69.18,63.02 C 69.18,65.53 71.22,67.57 73.73,67.57 L 95.45,67.57 C 97.97,67.57 100,65.53 100,63.02 L 100,41.3 C 100,38.79 97.97,36.75 95.45,36.75 Z M 83.4,57.45 83.4,46.86 90.3,52.16 Z" />
+			<path
+				d="M 26.27,36.75 4.55,36.75 C 2.037,36.75 0,38.79 0,41.3 L 0,63.02 C 0,65.53 2.037,67.57 4.55,67.57 L 26.27,67.57 C 28.78,67.57 30.82,65.53 30.82,63.02 L 30.82,41.3 C 30.82,38.79 28.78,36.75 26.27,36.75 Z M 16.69,57.45 9.79,52.16 16.69,46.86 Z" />
+		</symbol>
+	</svg>
+	<main>
+		<div class="content content--fixed">
+			<header class="codrops-header">
+				<div class="codrops-links">
+					<a class="codrops-icon codrops-icon--prev" href="index.html" title="Previous Demo"><svg
+							class="icon icon--arrow">
+							<use xlink:href="#icon-arrow"></use>
+						</svg></a>
+				</div>
+				<a href="index.html" class="codrops-header__title">BACK</a>
+			</header>
+
+			<!-- 		 -->
+		</div>
+		<div class="content">
+			<canvas class="scene scene--full" id="scene"></canvas>
+			<script type="x-shader/x-vertex" id="wrapVertexShader">
 					attribute float size;
 					attribute vec3 color;
 					varying vec3 vColor;
@@ -61,7 +75,7 @@
 						gl_Position = projectionMatrix * mvPosition;
 					}
 				</script>
-				<script type="x-shader/x-fragment" id="wrapFragmentShader">
+			<script type="x-shader/x-fragment" id="wrapFragmentShader">
 					varying vec3 vColor;
 					uniform sampler2D texture;
 					void main(){
@@ -71,1500 +85,144 @@
 						gl_FragColor = color;
 					}
 				</script>
-				<div class="content__inner">
-					<h2 class="content__title">COMPUTER SCIENCE</h2>
-					<h3 class="content__subtitle">SOCIETY</h2>
-				
-			
-				</div>
-				
+			<div class="content__inner">
+				<h2 class="content__title">COMPUTER SCIENCE</h2>
+				<h3 class="content__subtitle">SOCIETY</h2>
+
+
 			</div>
-			<div class="context">
 
-				<hr>
-				<h2>ABOUT</h2>
-				<p  class="ptag">
-					The IEEE Computer Society traces its origins back to 1946. After nearly 75 years, the organization now stands as the beacon of information and the premier source of inspiration and collaboration of computer science and engineering due to the 373,000 individuals from all around the world who have put their heart and soul into transforming it into the computer society that empowers people who advance technology by delivering tools for individuals at all stages of their professional careers. The IEEE Madras Section is one of the most active sections in India.
-		
-					St. Joseph's college of engineering has housed the student branch of IEEE computer society since 2002. The student branch is now a growing family of members who actively dedicate their time towards society and participate in multiple national as well as international events. Through the years, we have managed to distinguish ourselves with our vision of providing opportunities for  students and helping them equip themselves better, technically or otherwise, for the outside world through regularly conducting highly interactive events with our student body.
-		
-				</p>
-				<hr>
+		</div>
+		<div class="context">
 
-				<h2>
-					VISION
-				</h2>
-				<p>To reimagine and reinvent technology in ways that help to build a fulfilling world, especially including the aspects of education, the community and the environment.
+			<hr>
+			<h2>ABOUT</h2>
+			<p class="ptag">
+				The IEEE Computer Society traces its origins back to 1946. After nearly 75 years, the organization now
+				stands as the beacon of information and the premier source of inspiration and collaboration of computer
+				science and engineering due to the 373,000 individuals from all around the world who have put their
+				heart and soul into transforming it into the computer society that empowers people who advance
+				technology by delivering tools for individuals at all stages of their professional careers. The IEEE
+				Madras Section is one of the most active sections in India.
 
-				</p>
-				<hr>
-				<h2>Mission</h2>
-				<p class="ptag">Our mission is to nurture and promote technological upheaval, meaningful innovation and excellence far and wide. To help inspire and accelerate the advent of augmented technological progress by producing and providing adequate tools as well as unprecedented value and opportunity for people, irrespective of their level of learning. To be the world's foremost provider of enriching technical information and tailored services to computing professionals throughout the world.</p>
+				St. Joseph's college of engineering has housed the student branch of IEEE computer society since 2002.
+				The student branch is now a growing family of members who actively dedicate their time towards society
+				and participate in multiple national as well as international events. Through the years, we have managed
+				to distinguish ourselves with our vision of providing opportunities for  students and helping them equip
+				themselves better, technically or otherwise, for the outside world through regularly conducting highly
+				interactive events with our student body.
 
-					<hr>
-				
-					<h2>Excom Members </h2>
-		
-			</div>
-			<div className="body">
-				<div className="sbc">
-				  <div class="nine">
-					<h1>Student Branch Office Bearers<span>Execom 2020</span></h1>
-				  </div>
-		  
-				  <div className="box">
-					<div className="excomCard">
-					  <div className="rot">
-						<svg xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 500 500">
-						  <title>Red Hot Chilli Peppers Logo</title>
-						  <defs>
-							<path d="M50,250c0-110.5,89.5-200,200-200s200,89.5,200,200s-89.5,200-200,200S50,360.5,50,250" id="textcircle">
-							  <animateTransform
-								attributeName="transform"
-								begin="0s"
-								dur="30s"
-								type="rotate"
-								from="0 250 250"
-								to="360 250 250"
-								repeatCount="indefinite"
-							  />
-							</path>
-		  
-						  </defs>
-		  
-						  <use xlinkHref="#redstripe" transform="rotate(90 250 250)" />
-						  <use xlinkHref="#redstripe" transform="rotate(45 250 250)" />
-						  <use xlinkHref="#redstripe" transform="rotate(-45 250 250)" />
-						  <text dy="70" textLength="1220">
-		  
-							<textPath xlinkHref="#textcircle">Execom 2020 * Execom 2020 *</textPath>
-						  </text>
-						</svg>
-					  </div>
-					  <div className="imgBx">
-						<img src="https://images.unsplash.com/photo-1532123675048-773bd75df1b4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" alt="images"></img>
-					  </div>
-					  <div className="detail">
-						<h2>Sreekanth R
-						</h2>
-					  </div>
-					  <div className="details">
-						<h2>Sreekanth R
-						  <span>ADVISOR
-		  
-						  </span></h2>
-						<a href="#" class="fa fa-linkedin"></a>
-						<a href="#" class="fa fa-envelope"></a>
-					  </div>
-					</div>
-					<div className="excomCard">
-					  <div className="rot">
-						<svg xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 500 500">
-						  <title>Red Hot Chilli Peppers Logo</title>
-						  <defs>
-							<path d="M50,250c0-110.5,89.5-200,200-200s200,89.5,200,200s-89.5,200-200,200S50,360.5,50,250" id="textcircle">
-							  <animateTransform
-								attributeName="transform"
-								begin="0s"
-								dur="30s"
-								type="rotate"
-								from="0 250 250"
-								to="360 250 250"
-								repeatCount="indefinite"
-							  />
-							</path>
-		  
-						  </defs>
-		  
-						  <use xlinkHref="#redstripe" transform="rotate(90 250 250)" />
-						  <use xlinkHref="#redstripe" transform="rotate(45 250 250)" />
-						  <use xlinkHref="#redstripe" transform="rotate(-45 250 250)" />
-						  <text dy="70" textLength="1220">
-		  
-							<textPath xlinkHref="#textcircle">Execom 2020 * Execom 2020 *</textPath>
-						  </text>
-						</svg>
-					  </div>
-					  <div className="imgBx">
-						<img src="https://images.unsplash.com/photo-1532123675048-773bd75df1b4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" alt="images"></img>
-					  </div>
-					  <div className="detail">
-						<h2>Kumaran MS
-						</h2>
-					  </div>
-					  <div className="details">
-						<h2>Kumaran MS
-						  <span>CHAIR PERSON
-						  </span></h2>
-						<a href="#" class="fa fa-linkedin"></a>
-						<a href="#" class="fa fa-envelope"></a>
-					  </div>
-					</div>
-					<div className="excomCard">
-					  <div className="rot">
-						<svg xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 500 500">
-						  <title>Red Hot Chilli Peppers Logo</title>
-						  <defs>
-							<path d="M50,250c0-110.5,89.5-200,200-200s200,89.5,200,200s-89.5,200-200,200S50,360.5,50,250" id="textcircle">
-							  <animateTransform
-								attributeName="transform"
-								begin="0s"
-								dur="30s"
-								type="rotate"
-								from="0 250 250"
-								to="360 250 250"
-								repeatCount="indefinite"
-							  />
-							</path>
-		  
-						  </defs>
-		  
-						  <use xlinkHref="#redstripe" transform="rotate(90 250 250)" />
-						  <use xlinkHref="#redstripe" transform="rotate(45 250 250)" />
-						  <use xlinkHref="#redstripe" transform="rotate(-45 250 250)" />
-						  <text dy="70" textLength="1220">
-		  
-							<textPath xlinkHref="#textcircle">Execom 2020 * Execom 2020 *</textPath>
-						  </text>
-						</svg>
-					  </div>
-					  <div className="imgBx">
-						<img src="https://images.unsplash.com/photo-1532123675048-773bd75df1b4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" alt="images"></img>
-					  </div>
-					  <div className="detail">
-						<h2>Arangan Rishikesh T
-						</h2>
-					  </div>
-					  <div className="details">
-						<h2>Arangan Rishikesh T
-						  <span>VICE CHAIR
-		  
-						  </span></h2>
-						<a href="#" class="fa fa-linkedin"></a>
-						<a href="#" class="fa fa-envelope"></a>
-					  </div>
-					</div>
-		  
-		  
-		  
-		  
-				  </div>
-				  <div className="box">
-					<div className="excomCard">
-					  <div className="rot">
-						<svg xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 500 500">
-						  <title>Red Hot Chilli Peppers Logo</title>
-						  <defs>
-							<path d="M50,250c0-110.5,89.5-200,200-200s200,89.5,200,200s-89.5,200-200,200S50,360.5,50,250" id="textcircle">
-							  <animateTransform
-								attributeName="transform"
-								begin="0s"
-								dur="30s"
-								type="rotate"
-								from="0 250 250"
-								to="360 250 250"
-								repeatCount="indefinite"
-							  />
-							</path>
-		  
-						  </defs>
-		  
-						  <use xlinkHref="#redstripe" transform="rotate(90 250 250)" />
-						  <use xlinkHref="#redstripe" transform="rotate(45 250 250)" />
-						  <use xlinkHref="#redstripe" transform="rotate(-45 250 250)" />
-						  <text dy="70" textLength="1220">
-		  
-							<textPath xlinkHref="#textcircle">Execom 2020 * Execom 2020 *</textPath>
-						  </text>
-						</svg>
-					  </div>
-					  <div className="imgBx">
-						<img src="https://images.unsplash.com/photo-1532123675048-773bd75df1b4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" alt="images"></img>
-					  </div>
-					  <div className="detail">
-						<h2>Hounandan R</h2>
-					  </div>
-					  <div className="details">
-						<h2>Hounandan R<span>SECRETARY</span></h2>
-						<a href="#" class="fa fa-linkedin"></a>
-						<a href="#" class="fa fa-envelope"></a>
-					  </div>
-					</div>
-					<div className="excomCard">
-					  <div className="rot">
-						<svg xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 500 500">
-						  <title>Red Hot Chilli Peppers Logo</title>
-						  <defs>
-							<path d="M50,250c0-110.5,89.5-200,200-200s200,89.5,200,200s-89.5,200-200,200S50,360.5,50,250" id="textcircle">
-							  <animateTransform
-								attributeName="transform"
-								begin="0s"
-								dur="30s"
-								type="rotate"
-								from="0 250 250"
-								to="360 250 250"
-								repeatCount="indefinite"
-							  />
-							</path>
-		  
-						  </defs>
-		  
-						  <use xlinkHref="#redstripe" transform="rotate(90 250 250)" />
-						  <use xlinkHref="#redstripe" transform="rotate(45 250 250)" />
-						  <use xlinkHref="#redstripe" transform="rotate(-45 250 250)" />
-						  <text dy="70" textLength="1220">
-		  
-							<textPath xlinkHref="#textcircle">Execom 2020 * Execom 2020 *</textPath>
-						  </text>
-						</svg>
-					  </div>
-					  <div className="imgBx">
-						<img src="https://images.unsplash.com/photo-1532123675048-773bd75df1b4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" alt="images"></img>
-					  </div>
-					  <div className="detail">
-						<h2>Sharan R
-						</h2>
-					  </div>
-					  <div className="details">
-						<h2>Sharan R
-						  <span>JOINT SECRETARY
-						  </span></h2>
-						<a href="#" class="fa fa-linkedin"></a>
-						<a href="#" class="fa fa-envelope"></a>
-					  </div>
-					</div>
-					<div className="excomCard">
-					  <div className="rot">
-						<svg xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 500 500">
-						  <title>Red Hot Chilli Peppers Logo</title>
-						  <defs>
-							<path d="M50,250c0-110.5,89.5-200,200-200s200,89.5,200,200s-89.5,200-200,200S50,360.5,50,250" id="textcircle">
-							  <animateTransform
-								attributeName="transform"
-								begin="0s"
-								dur="30s"
-								type="rotate"
-								from="0 250 250"
-								to="360 250 250"
-								repeatCount="indefinite"
-							  />
-							</path>
-		  
-						  </defs>
-		  
-						  <use xlinkHref="#redstripe" transform="rotate(90 250 250)" />
-						  <use xlinkHref="#redstripe" transform="rotate(45 250 250)" />
-						  <use xlinkHref="#redstripe" transform="rotate(-45 250 250)" />
-						  <text dy="70" textLength="1220">
-		  
-							<textPath xlinkHref="#textcircle">Execom 2020 * Execom 2020 *</textPath>
-						  </text>
-						</svg>
-					  </div>
-					  <div className="imgBx">
-						<img src="https://images.unsplash.com/photo-1532123675048-773bd75df1b4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" alt="images"></img>
-					  </div>
-					  <div className="detail">
-						<h2>Prahatheesh B
-						</h2>
-					  </div>
-					  <div className="details">
-						<h2>Prahatheesh B
-						  <span>TREASURER
-		  
-		  
-						  </span></h2>
-						<a href="#" class="fa fa-linkedin"></a>
-						<a href="#" class="fa fa-envelope"></a>
-					  </div>
-					</div>
-		  
-		  
-		  
-		  
-				  </div>
-				  <div className="box">
-					<div className="excomCard">
-					  <div className="rot">
-						<svg xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 500 500">
-						  <title>Red Hot Chilli Peppers Logo</title>
-						  <defs>
-							<path d="M50,250c0-110.5,89.5-200,200-200s200,89.5,200,200s-89.5,200-200,200S50,360.5,50,250" id="textcircle">
-							  <animateTransform
-								attributeName="transform"
-								begin="0s"
-								dur="30s"
-								type="rotate"
-								from="0 250 250"
-								to="360 250 250"
-								repeatCount="indefinite"
-							  />
-							</path>
-		  
-						  </defs>
-		  
-						  <use xlinkHref="#redstripe" transform="rotate(90 250 250)" />
-						  <use xlinkHref="#redstripe" transform="rotate(45 250 250)" />
-						  <use xlinkHref="#redstripe" transform="rotate(-45 250 250)" />
-						  <text dy="70" textLength="1220">
-		  
-							<textPath xlinkHref="#textcircle">Execom 2020 * Execom 2020 *</textPath>
-						  </text>
-						</svg>
-					  </div>
-					  <div className="imgBx">
-						<img src="https://images.unsplash.com/photo-1532123675048-773bd75df1b4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" alt="images"></img>
-					  </div>
-					  <div className="detail">
-						<h2>Bavithra Rajan S
-		  
-						</h2>
-					  </div>
-					  <div className="details">
-						<h2>Bavithra Rajan S
-		  
-						  <span>WEB MASTER
-		  
-		  
-						  </span></h2>
-						<a href="#" class="fa fa-linkedin"></a>
-						<a href="#" class="fa fa-envelope"></a>
-					  </div>
-					</div>
-		  
-		  
-		  
-		  
-				  </div>
-				</div>
-				<div className="ras">
-				  <div class="nine">
-					<h1>Industrial Applications Society Office Bearers<span>Execom 2020</span></h1>
-				  </div>
-		  
-				  <div className="box">
-					<div className="excomCard">
-					  <div className="rot">
-						<svg xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 500 500">
-						  <title>Red Hot Chilli Peppers Logo</title>
-						  <defs>
-							<path d="M50,250c0-110.5,89.5-200,200-200s200,89.5,200,200s-89.5,200-200,200S50,360.5,50,250" id="textcircle">
-							  <animateTransform
-								attributeName="transform"
-								begin="0s"
-								dur="30s"
-								type="rotate"
-								from="0 250 250"
-								to="360 250 250"
-								repeatCount="indefinite"
-							  />
-							</path>
-		  
-						  </defs>
-		  
-						  <use xlinkHref="#redstripe" transform="rotate(90 250 250)" />
-						  <use xlinkHref="#redstripe" transform="rotate(45 250 250)" />
-						  <use xlinkHref="#redstripe" transform="rotate(-45 250 250)" />
-						  <text dy="70" textLength="1220">
-		  
-							<textPath xlinkHref="#textcircle">Execom 2020 * Execom 2020 *</textPath>
-						  </text>
-						</svg>
-					  </div>
-					  <div className="imgBx">
-						<img src="https://images.unsplash.com/photo-1532123675048-773bd75df1b4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" alt="images"></img>
-					  </div>
-					  <div className="detail">
-						<h2>Dr.Jayarama Pradeep
-						</h2>
-					  </div>
-					  <div className="details">
-						<h2>Dr.Jayarama Pradeep
-						  <span>ADVISOR
-						  </span></h2>
-						<a href="#" class="fa fa-linkedin"></a>
-						<a href="#" class="fa fa-envelope"></a>
-					  </div>
-					</div>
-					<div className="excomCard">
-					  <div className="rot">
-						<svg xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 500 500">
-						  <title>Red Hot Chilli Peppers Logo</title>
-						  <defs>
-							<path d="M50,250c0-110.5,89.5-200,200-200s200,89.5,200,200s-89.5,200-200,200S50,360.5,50,250" id="textcircle">
-							  <animateTransform
-								attributeName="transform"
-								begin="0s"
-								dur="30s"
-								type="rotate"
-								from="0 250 250"
-								to="360 250 250"
-								repeatCount="indefinite"
-							  />
-							</path>
-		  
-						  </defs>
-		  
-						  <use xlinkHref="#redstripe" transform="rotate(90 250 250)" />
-						  <use xlinkHref="#redstripe" transform="rotate(45 250 250)" />
-						  <use xlinkHref="#redstripe" transform="rotate(-45 250 250)" />
-						  <text dy="70" textLength="1220">
-		  
-							<textPath xlinkHref="#textcircle">Execom 2020 * Execom 2020 *</textPath>
-						  </text>
-						</svg>
-					  </div>
-					  <div className="imgBx">
-						<img src="https://images.unsplash.com/photo-1532123675048-773bd75df1b4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" alt="images"></img>
-					  </div>
-					  <div className="detail">
-						<h2>Yogesh S N
-						</h2>
-					  </div>
-					  <div className="details">
-						<h2>Yogesh S N
-						  <span>CHAIR PERSON
-						  </span></h2>
-						<a href="#" class="fa fa-linkedin"></a>
-						<a href="#" class="fa fa-envelope"></a>
-					  </div>
-					</div>
-					<div className="excomCard">
-					  <div className="rot">
-						<svg xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 500 500">
-						  <title>Red Hot Chilli Peppers Logo</title>
-						  <defs>
-							<path d="M50,250c0-110.5,89.5-200,200-200s200,89.5,200,200s-89.5,200-200,200S50,360.5,50,250" id="textcircle">
-							  <animateTransform
-								attributeName="transform"
-								begin="0s"
-								dur="30s"
-								type="rotate"
-								from="0 250 250"
-								to="360 250 250"
-								repeatCount="indefinite"
-							  />
-							</path>
-		  
-						  </defs>
-		  
-						  <use xlinkHref="#redstripe" transform="rotate(90 250 250)" />
-						  <use xlinkHref="#redstripe" transform="rotate(45 250 250)" />
-						  <use xlinkHref="#redstripe" transform="rotate(-45 250 250)" />
-						  <text dy="70" textLength="1220">
-		  
-							<textPath xlinkHref="#textcircle">Execom 2020 * Execom 2020 *</textPath>
-						  </text>
-						</svg>
-					  </div>
-					  <div className="imgBx">
-						<img src="https://images.unsplash.com/photo-1532123675048-773bd75df1b4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" alt="images"></img>
-					  </div>
-					  <div className="detail">
-						<h2>Krishaa P R
-						</h2>
-					  </div>
-					  <div className="details">
-						<h2>Krishaa P R
-						  <span>VICE CHAIR
-		  
-						  </span></h2>
-						<a href="#" class="fa fa-linkedin"></a>
-						<a href="#" class="fa fa-envelope"></a>
-					  </div>
-					</div>
-		  
-		  
-		  
-		  
-				  </div>
-				  <div className="box">
-					<div className="excomCard">
-					  <div className="rot">
-						<svg xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 500 500">
-						  <title>Red Hot Chilli Peppers Logo</title>
-						  <defs>
-							<path d="M50,250c0-110.5,89.5-200,200-200s200,89.5,200,200s-89.5,200-200,200S50,360.5,50,250" id="textcircle">
-							  <animateTransform
-								attributeName="transform"
-								begin="0s"
-								dur="30s"
-								type="rotate"
-								from="0 250 250"
-								to="360 250 250"
-								repeatCount="indefinite"
-							  />
-							</path>
-		  
-						  </defs>
-		  
-						  <use xlinkHref="#redstripe" transform="rotate(90 250 250)" />
-						  <use xlinkHref="#redstripe" transform="rotate(45 250 250)" />
-						  <use xlinkHref="#redstripe" transform="rotate(-45 250 250)" />
-						  <text dy="70" textLength="1220">
-		  
-							<textPath xlinkHref="#textcircle">Execom 2020 * Execom 2020 *</textPath>
-						  </text>
-						</svg>
-					  </div>
-					  <div className="imgBx">
-						<img src="https://images.unsplash.com/photo-1532123675048-773bd75df1b4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" alt="images"></img>
-					  </div>
-					  <div className="detail">
-						<h2>Hariharan P
-						</h2>
-					  </div>
-					  <div className="details">
-						<h2>Hariharan P
-						  <span>SECRETARY
-						  </span></h2>
-						<a href="#" class="fa fa-linkedin"></a>
-						<a href="#" class="fa fa-envelope"></a>
-					  </div>
-					</div>
-					<div className="excomCard">
-					  <div className="rot">
-						<svg xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 500 500">
-						  <title>Red Hot Chilli Peppers Logo</title>
-						  <defs>
-							<path d="M50,250c0-110.5,89.5-200,200-200s200,89.5,200,200s-89.5,200-200,200S50,360.5,50,250" id="textcircle">
-							  <animateTransform
-								attributeName="transform"
-								begin="0s"
-								dur="30s"
-								type="rotate"
-								from="0 250 250"
-								to="360 250 250"
-								repeatCount="indefinite"
-							  />
-							</path>
-		  
-						  </defs>
-		  
-						  <use xlinkHref="#redstripe" transform="rotate(90 250 250)" />
-						  <use xlinkHref="#redstripe" transform="rotate(45 250 250)" />
-						  <use xlinkHref="#redstripe" transform="rotate(-45 250 250)" />
-						  <text dy="70" textLength="1220">
-		  
-							<textPath xlinkHref="#textcircle">Execom 2020 * Execom 2020 *</textPath>
-						  </text>
-						</svg>
-					  </div>
-					  <div className="imgBx">
-						<img src="https://images.unsplash.com/photo-1532123675048-773bd75df1b4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" alt="images"></img>
-					  </div>
-					  <div className="detail">
-						<h2>Arvind G K
-						</h2>
-					  </div>
-					  <div className="details">
-						<h2>Arvind G K
-						  <span>JOINT SECRETARY
-		  
-						  </span></h2>
-						<a href="#" class="fa fa-linkedin"></a>
-						<a href="#" class="fa fa-envelope"></a>
-					  </div>
-					</div>
-					<div className="excomCard">
-					  <div className="rot">
-						<svg xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 500 500">
-						  <title>Red Hot Chilli Peppers Logo</title>
-						  <defs>
-							<path d="M50,250c0-110.5,89.5-200,200-200s200,89.5,200,200s-89.5,200-200,200S50,360.5,50,250" id="textcircle">
-							  <animateTransform
-								attributeName="transform"
-								begin="0s"
-								dur="30s"
-								type="rotate"
-								from="0 250 250"
-								to="360 250 250"
-								repeatCount="indefinite"
-							  />
-							</path>
-		  
-						  </defs>
-		  
-						  <use xlinkHref="#redstripe" transform="rotate(90 250 250)" />
-						  <use xlinkHref="#redstripe" transform="rotate(45 250 250)" />
-						  <use xlinkHref="#redstripe" transform="rotate(-45 250 250)" />
-						  <text dy="70" textLength="1220">
-		  
-							<textPath xlinkHref="#textcircle">Execom 2020 * Execom 2020 *</textPath>
-						  </text>
-						</svg>
-					  </div>
-					  <div className="imgBx">
-						<img src="https://images.unsplash.com/photo-1532123675048-773bd75df1b4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" alt="images"></img>
-					  </div>
-					  <div className="detail">
-						<h2>Purnima Mangalya T
-						</h2>
-					  </div>
-					  <div className="details">
-						<h2>Purnima Mangalya T
-						  <span>TREASURER
-						  </span></h2>
-						<a href="#" class="fa fa-linkedin"></a>
-						<a href="#" class="fa fa-envelope"></a>
-					  </div>
-					</div>
-		  
-		  
-		  
-		  
-				  </div>
-				</div>
-				<div className="ias">
-				  <div class="nine">
-					<h1>Robotics and Automation Society Office Bearers<span>Execom 2020</span></h1>
-				  </div>
-		  
-				  <div className="box">
-					<div className="excomCard">
-					  <div className="rot">
-						<svg xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 500 500">
-						  <title>Red Hot Chilli Peppers Logo</title>
-						  <defs>
-							<path d="M50,250c0-110.5,89.5-200,200-200s200,89.5,200,200s-89.5,200-200,200S50,360.5,50,250" id="textcircle">
-							  <animateTransform
-								attributeName="transform"
-								begin="0s"
-								dur="30s"
-								type="rotate"
-								from="0 250 250"
-								to="360 250 250"
-								repeatCount="indefinite"
-							  />
-							</path>
-		  
-						  </defs>
-		  
-						  <use xlinkHref="#redstripe" transform="rotate(90 250 250)" />
-						  <use xlinkHref="#redstripe" transform="rotate(45 250 250)" />
-						  <use xlinkHref="#redstripe" transform="rotate(-45 250 250)" />
-						  <text dy="70" textLength="1220">
-		  
-							<textPath xlinkHref="#textcircle">Execom 2020 * Execom 2020 *</textPath>
-						  </text>
-						</svg>
-					  </div>
-					  <div className="imgBx">
-						<img src="https://images.unsplash.com/photo-1532123675048-773bd75df1b4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" alt="images"></img>
-					  </div>
-					  <div className="detail">
-						<h2>Sreekanth R
-						</h2>
-					  </div>
-					  <div className="details">
-						<h2>Sreekanth R
-						  <span>ADVISOR
-						  </span></h2>
-						<a href="#" class="fa fa-linkedin"></a>
-						<a href="#" class="fa fa-envelope"></a>
-					  </div>
-					</div>
-					<div className="excomCard">
-					  <div className="rot">
-						<svg xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 500 500">
-						  <title>Red Hot Chilli Peppers Logo</title>
-						  <defs>
-							<path d="M50,250c0-110.5,89.5-200,200-200s200,89.5,200,200s-89.5,200-200,200S50,360.5,50,250" id="textcircle">
-							  <animateTransform
-								attributeName="transform"
-								begin="0s"
-								dur="30s"
-								type="rotate"
-								from="0 250 250"
-								to="360 250 250"
-								repeatCount="indefinite"
-							  />
-							</path>
-		  
-						  </defs>
-		  
-						  <use xlinkHref="#redstripe" transform="rotate(90 250 250)" />
-						  <use xlinkHref="#redstripe" transform="rotate(45 250 250)" />
-						  <use xlinkHref="#redstripe" transform="rotate(-45 250 250)" />
-						  <text dy="70" textLength="1220">
-		  
-							<textPath xlinkHref="#textcircle">Execom 2020 * Execom 2020 *</textPath>
-						  </text>
-						</svg>
-					  </div>
-					  <div className="imgBx">
-						<img src="https://images.unsplash.com/photo-1532123675048-773bd75df1b4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" alt="images"></img>
-					  </div>
-					  <div className="detail">
-						<h2>Swathish G
-						</h2>
-					  </div>
-					  <div className="details">
-						<h2>Swathish G
-						  <span>CHAIR PERSON
-		  
-						  </span></h2>
-						<a href="#" class="fa fa-linkedin"></a>
-						<a href="#" class="fa fa-envelope"></a>
-					  </div>
-					</div>
-					<div className="excomCard">
-					  <div className="rot">
-						<svg xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 500 500">
-						  <title>Red Hot Chilli Peppers Logo</title>
-						  <defs>
-							<path d="M50,250c0-110.5,89.5-200,200-200s200,89.5,200,200s-89.5,200-200,200S50,360.5,50,250" id="textcircle">
-							  <animateTransform
-								attributeName="transform"
-								begin="0s"
-								dur="30s"
-								type="rotate"
-								from="0 250 250"
-								to="360 250 250"
-								repeatCount="indefinite"
-							  />
-							</path>
-		  
-						  </defs>
-		  
-						  <use xlinkHref="#redstripe" transform="rotate(90 250 250)" />
-						  <use xlinkHref="#redstripe" transform="rotate(45 250 250)" />
-						  <use xlinkHref="#redstripe" transform="rotate(-45 250 250)" />
-						  <text dy="70" textLength="1220">
-		  
-							<textPath xlinkHref="#textcircle">Execom 2020 * Execom 2020 *</textPath>
-						  </text>
-						</svg>
-					  </div>
-					  <div className="imgBx">
-						<img src="https://images.unsplash.com/photo-1532123675048-773bd75df1b4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" alt="images"></img>
-					  </div>
-					  <div className="detail">
-						<h2>Sriram A
-						</h2>
-					  </div>
-					  <div className="details">
-						<h2>Sriram A
-						  <span>VICE CHAIR
-		  
-						  </span></h2>
-						<a href="#" class="fa fa-linkedin"></a>
-						<a href="#" class="fa fa-envelope"></a>
-					  </div>
-					</div>
-		  
-		  
-		  
-		  
-				  </div>
-				  <div className="box">
-					<div className="excomCard">
-					  <div className="rot">
-						<svg xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 500 500">
-						  <title>Red Hot Chilli Peppers Logo</title>
-						  <defs>
-							<path d="M50,250c0-110.5,89.5-200,200-200s200,89.5,200,200s-89.5,200-200,200S50,360.5,50,250" id="textcircle">
-							  <animateTransform
-								attributeName="transform"
-								begin="0s"
-								dur="30s"
-								type="rotate"
-								from="0 250 250"
-								to="360 250 250"
-								repeatCount="indefinite"
-							  />
-							</path>
-		  
-						  </defs>
-		  
-						  <use xlinkHref="#redstripe" transform="rotate(90 250 250)" />
-						  <use xlinkHref="#redstripe" transform="rotate(45 250 250)" />
-						  <use xlinkHref="#redstripe" transform="rotate(-45 250 250)" />
-						  <text dy="70" textLength="1220">
-		  
-							<textPath xlinkHref="#textcircle">Execom 2020 * Execom 2020 *</textPath>
-						  </text>
-						</svg>
-					  </div>
-					  <div className="imgBx">
-						<img src="https://images.unsplash.com/photo-1532123675048-773bd75df1b4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" alt="images"></img>
-					  </div>
-					  <div className="detail">
-						<h2>Dennis Christopher
-						</h2>
-					  </div>
-					  <div className="details">
-						<h2>Dennis Christopher
-						  <span>SECRETARY
-						  </span></h2>
-						<a href="#" class="fa fa-linkedin"></a>
-						<a href="#" class="fa fa-envelope"></a>
-					  </div>
-					</div>
-					<div className="excomCard">
-					  <div className="rot">
-						<svg xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 500 500">
-						  <title>Red Hot Chilli Peppers Logo</title>
-						  <defs>
-							<path d="M50,250c0-110.5,89.5-200,200-200s200,89.5,200,200s-89.5,200-200,200S50,360.5,50,250" id="textcircle">
-							  <animateTransform
-								attributeName="transform"
-								begin="0s"
-								dur="30s"
-								type="rotate"
-								from="0 250 250"
-								to="360 250 250"
-								repeatCount="indefinite"
-							  />
-							</path>
-		  
-						  </defs>
-		  
-						  <use xlinkHref="#redstripe" transform="rotate(90 250 250)" />
-						  <use xlinkHref="#redstripe" transform="rotate(45 250 250)" />
-						  <use xlinkHref="#redstripe" transform="rotate(-45 250 250)" />
-						  <text dy="70" textLength="1220">
-		  
-							<textPath xlinkHref="#textcircle">Execom 2020 * Execom 2020 *</textPath>
-						  </text>
-						</svg>
-					  </div>
-					  <div className="imgBx">
-						<img src="https://images.unsplash.com/photo-1532123675048-773bd75df1b4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" alt="images"></img>
-					  </div>
-					  <div className="detail">
-						<h2>Praneet S
-						</h2>
-					  </div>
-					  <div className="details">
-						<h2>Praneet S
-						  <span>JOINT SECRETARY
-		  
-						  </span></h2>
-						<a href="#" class="fa fa-linkedin"></a>
-						<a href="#" class="fa fa-envelope"></a>
-					  </div>
-					</div>
-					<div className="excomCard">
-					  <div className="rot">
-						<svg xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 500 500">
-						  <title>Red Hot Chilli Peppers Logo</title>
-						  <defs>
-							<path d="M50,250c0-110.5,89.5-200,200-200s200,89.5,200,200s-89.5,200-200,200S50,360.5,50,250" id="textcircle">
-							  <animateTransform
-								attributeName="transform"
-								begin="0s"
-								dur="30s"
-								type="rotate"
-								from="0 250 250"
-								to="360 250 250"
-								repeatCount="indefinite"
-							  />
-							</path>
-		  
-						  </defs>
-		  
-						  <use xlinkHref="#redstripe" transform="rotate(90 250 250)" />
-						  <use xlinkHref="#redstripe" transform="rotate(45 250 250)" />
-						  <use xlinkHref="#redstripe" transform="rotate(-45 250 250)" />
-						  <text dy="70" textLength="1220">
-		  
-							<textPath xlinkHref="#textcircle">Execom 2020 * Execom 2020 *</textPath>
-						  </text>
-						</svg>
-					  </div>
-					  <div className="imgBx">
-						<img src="https://images.unsplash.com/photo-1532123675048-773bd75df1b4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" alt="images"></img>
-					  </div>
-					  <div className="detail">
-						<h2>Arun Kumar S
-						</h2>
-					  </div>
-					  <div className="details">
-						<h2>Arun Kumar S
-						  <span>TREASURER
-						  </span></h2>
-						<a href="#" class="fa fa-linkedin"></a>
-						<a href="#" class="fa fa-envelope"></a>
-					  </div>
-					</div>
-		  
-		  
-		  
-		  
-				  </div>
-				</div>
-				<div className="pels">
-				  <div class="nine">
-					<h1>Power Electronics Society Office Bearers<span>Execom 2020</span></h1>
-				  </div>
-		  
-				  <div className="box">
-					<div className="excomCard">
-					  <div className="rot">
-						<svg xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 500 500">
-						  <title>Red Hot Chilli Peppers Logo</title>
-						  <defs>
-							<path d="M50,250c0-110.5,89.5-200,200-200s200,89.5,200,200s-89.5,200-200,200S50,360.5,50,250" id="textcircle">
-							  <animateTransform
-								attributeName="transform"
-								begin="0s"
-								dur="30s"
-								type="rotate"
-								from="0 250 250"
-								to="360 250 250"
-								repeatCount="indefinite"
-							  />
-							</path>
-		  
-						  </defs>
-		  
-						  <use xlinkHref="#redstripe" transform="rotate(90 250 250)" />
-						  <use xlinkHref="#redstripe" transform="rotate(45 250 250)" />
-						  <use xlinkHref="#redstripe" transform="rotate(-45 250 250)" />
-						  <text dy="70" textLength="1220">
-		  
-							<textPath xlinkHref="#textcircle">Execom 2020 * Execom 2020 *</textPath>
-						  </text>
-						</svg>
-					  </div>
-					  <div className="imgBx">
-						<img src="https://images.unsplash.com/photo-1532123675048-773bd75df1b4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" alt="images"></img>
-					  </div>
-					  <div className="detail">
-						<h2>Sreekanth R
-						</h2>
-					  </div>
-					  <div className="details">
-						<h2>Sreekanth R
-						  <span>ADVISOR
-						  </span></h2>
-						<a href="#" class="fa fa-linkedin"></a>
-						<a href="#" class="fa fa-envelope"></a>
-					  </div>
-					</div>
-					<div className="excomCard">
-					  <div className="rot">
-						<svg xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 500 500">
-						  <title>Red Hot Chilli Peppers Logo</title>
-						  <defs>
-							<path d="M50,250c0-110.5,89.5-200,200-200s200,89.5,200,200s-89.5,200-200,200S50,360.5,50,250" id="textcircle">
-							  <animateTransform
-								attributeName="transform"
-								begin="0s"
-								dur="30s"
-								type="rotate"
-								from="0 250 250"
-								to="360 250 250"
-								repeatCount="indefinite"
-							  />
-							</path>
-		  
-						  </defs>
-		  
-						  <use xlinkHref="#redstripe" transform="rotate(90 250 250)" />
-						  <use xlinkHref="#redstripe" transform="rotate(45 250 250)" />
-						  <use xlinkHref="#redstripe" transform="rotate(-45 250 250)" />
-						  <text dy="70" textLength="1220">
-		  
-							<textPath xlinkHref="#textcircle">Execom 2020 * Execom 2020 *</textPath>
-						  </text>
-						</svg>
-					  </div>
-					  <div className="imgBx">
-						<img src="https://images.unsplash.com/photo-1532123675048-773bd75df1b4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" alt="images"></img>
-					  </div>
-					  <div className="detail">
-						<h2>Nirmitha A J
-						</h2>
-					  </div>
-					  <div className="details">
-						<h2>Nirmitha A J
-						  <span>CHAIR PERSON
-						  </span></h2>
-						<a href="#" class="fa fa-linkedin"></a>
-						<a href="#" class="fa fa-envelope"></a>
-					  </div>
-					</div>
-					<div className="excomCard">
-					  <div className="rot">
-						<svg xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 500 500">
-						  <title>Red Hot Chilli Peppers Logo</title>
-						  <defs>
-							<path d="M50,250c0-110.5,89.5-200,200-200s200,89.5,200,200s-89.5,200-200,200S50,360.5,50,250" id="textcircle">
-							  <animateTransform
-								attributeName="transform"
-								begin="0s"
-								dur="30s"
-								type="rotate"
-								from="0 250 250"
-								to="360 250 250"
-								repeatCount="indefinite"
-							  />
-							</path>
-		  
-						  </defs>
-		  
-						  <use xlinkHref="#redstripe" transform="rotate(90 250 250)" />
-						  <use xlinkHref="#redstripe" transform="rotate(45 250 250)" />
-						  <use xlinkHref="#redstripe" transform="rotate(-45 250 250)" />
-						  <text dy="70" textLength="1220">
-		  
-							<textPath xlinkHref="#textcircle">Execom 2020 * Execom 2020 *</textPath>
-						  </text>
-						</svg>
-					  </div>
-					  <div className="imgBx">
-						<img src="https://images.unsplash.com/photo-1532123675048-773bd75df1b4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" alt="images"></img>
-					  </div>
-					  <div className="detail">
-						<h2>Madhupreetha S
-						</h2>
-					  </div>
-					  <div className="details">
-						<h2>Madhupreetha S
-						  <span>VICE CHAIR
-		  
-						  </span></h2>
-						<a href="#" class="fa fa-linkedin"></a>
-						<a href="#" class="fa fa-envelope"></a>
-					  </div>
-					</div>
-		  
-		  
-		  
-		  
-				  </div>
-				  <div className="box">
-					<div className="excomCard">
-					  <div className="rot">
-						<svg xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 500 500">
-						  <title>Red Hot Chilli Peppers Logo</title>
-						  <defs>
-							<path d="M50,250c0-110.5,89.5-200,200-200s200,89.5,200,200s-89.5,200-200,200S50,360.5,50,250" id="textcircle">
-							  <animateTransform
-								attributeName="transform"
-								begin="0s"
-								dur="30s"
-								type="rotate"
-								from="0 250 250"
-								to="360 250 250"
-								repeatCount="indefinite"
-							  />
-							</path>
-		  
-						  </defs>
-		  
-						  <use xlinkHref="#redstripe" transform="rotate(90 250 250)" />
-						  <use xlinkHref="#redstripe" transform="rotate(45 250 250)" />
-						  <use xlinkHref="#redstripe" transform="rotate(-45 250 250)" />
-						  <text dy="70" textLength="1220">
-		  
-							<textPath xlinkHref="#textcircle">Execom 2020 * Execom 2020 *</textPath>
-						  </text>
-						</svg>
-					  </div>
-					  <div className="imgBx">
-						<img src="https://images.unsplash.com/photo-1532123675048-773bd75df1b4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" alt="images"></img>
-					  </div>
-					  <div className="detail">
-						<h2>Jennifer Dania T
-						</h2>
-					  </div>
-					  <div className="details">
-						<h2>Jennifer Dania T
-						  <span>SECRETARY
-						  </span></h2>
-						<a href="#" class="fa fa-linkedin"></a>
-						<a href="#" class="fa fa-envelope"></a>
-					  </div>
-					</div>
-					<div className="excomCard">
-					  <div className="rot">
-						<svg xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 500 500">
-						  <title>Red Hot Chilli Peppers Logo</title>
-						  <defs>
-							<path d="M50,250c0-110.5,89.5-200,200-200s200,89.5,200,200s-89.5,200-200,200S50,360.5,50,250" id="textcircle">
-							  <animateTransform
-								attributeName="transform"
-								begin="0s"
-								dur="30s"
-								type="rotate"
-								from="0 250 250"
-								to="360 250 250"
-								repeatCount="indefinite"
-							  />
-							</path>
-		  
-						  </defs>
-		  
-						  <use xlinkHref="#redstripe" transform="rotate(90 250 250)" />
-						  <use xlinkHref="#redstripe" transform="rotate(45 250 250)" />
-						  <use xlinkHref="#redstripe" transform="rotate(-45 250 250)" />
-						  <text dy="70" textLength="1220">
-		  
-							<textPath xlinkHref="#textcircle">Execom 2020 * Execom 2020 *</textPath>
-						  </text>
-						</svg>
-					  </div>
-					  <div className="imgBx">
-						<img src="https://images.unsplash.com/photo-1532123675048-773bd75df1b4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" alt="images"></img>
-					  </div>
-					  <div className="detail">
-						<h2>Karin Ramani A
-						</h2>
-					  </div>
-					  <div className="details">
-						<h2>Karin Ramani A
-						  <span>JOINT SECRETARY
-		  
-						  </span></h2>
-						<a href="#" class="fa fa-linkedin"></a>
-						<a href="#" class="fa fa-envelope"></a>
-					  </div>
-					</div>
-					<div className="excomCard">
-					  <div className="rot">
-						<svg xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 500 500">
-						  <title>Red Hot Chilli Peppers Logo</title>
-						  <defs>
-							<path d="M50,250c0-110.5,89.5-200,200-200s200,89.5,200,200s-89.5,200-200,200S50,360.5,50,250" id="textcircle">
-							  <animateTransform
-								attributeName="transform"
-								begin="0s"
-								dur="30s"
-								type="rotate"
-								from="0 250 250"
-								to="360 250 250"
-								repeatCount="indefinite"
-							  />
-							</path>
-		  
-						  </defs>
-		  
-						  <use xlinkHref="#redstripe" transform="rotate(90 250 250)" />
-						  <use xlinkHref="#redstripe" transform="rotate(45 250 250)" />
-						  <use xlinkHref="#redstripe" transform="rotate(-45 250 250)" />
-						  <text dy="70" textLength="1220">
-		  
-							<textPath xlinkHref="#textcircle">Execom 2020 * Execom 2020 *</textPath>
-						  </text>
-						</svg>
-					  </div>
-					  <div className="imgBx">
-						<img src="https://images.unsplash.com/photo-1532123675048-773bd75df1b4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" alt="images"></img>
-					  </div>
-					  <div className="detail">
-						<h2>Herena Joshika A S
-						</h2>
-					  </div>
-					  <div className="details">
-						<h2>Herena Joshika A S
-						  <span>TREASURER
-		  
-						  </span></h2>
-						<a href="#" class="fa fa-linkedin"></a>
-						<a href="#" class="fa fa-envelope"></a>
-					  </div>
-					</div>
-		  
-		  
-		  
-		  
-				  </div>
-				</div>
-				<div className="wie">
-				  <div class="nine">
-					<h1>Women In Engineering Affinity Group Office Bearers<span>Execom 2020</span></h1>
-				  </div>
-		  
-				  <div className="box">
-					<div className="excomCard">
-					  <div className="rot">
-						<svg xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 500 500">
-						  <title>Red Hot Chilli Peppers Logo</title>
-						  <defs>
-							<path d="M50,250c0-110.5,89.5-200,200-200s200,89.5,200,200s-89.5,200-200,200S50,360.5,50,250" id="textcircle">
-							  <animateTransform
-								attributeName="transform"
-								begin="0s"
-								dur="30s"
-								type="rotate"
-								from="0 250 250"
-								to="360 250 250"
-								repeatCount="indefinite"
-							  />
-							</path>
-		  
-						  </defs>
-		  
-						  <use xlinkHref="#redstripe" transform="rotate(90 250 250)" />
-						  <use xlinkHref="#redstripe" transform="rotate(45 250 250)" />
-						  <use xlinkHref="#redstripe" transform="rotate(-45 250 250)" />
-						  <text dy="70" textLength="1220">
-		  
-							<textPath xlinkHref="#textcircle">Execom 2020 * Execom 2020 *</textPath>
-						  </text>
-						</svg>
-					  </div>
-					  <div className="imgBx">
-						<img src="https://images.unsplash.com/photo-1532123675048-773bd75df1b4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" alt="images"></img>
-					  </div>
-					  <div className="detail">
-						<h2>Dr.Jayarama Pradeep
-						</h2>
-					  </div>
-					  <div className="details">
-						<h2>Dr.Jayarama Pradeep
-						  <span>ADVISOR
-						  </span></h2>
-						<a href="#" class="fa fa-linkedin"></a>
-						<a href="#" class="fa fa-envelope"></a>
-					  </div>
-					</div>
-					<div className="excomCard">
-					  <div className="rot">
-						<svg xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 500 500">
-						  <title>Red Hot Chilli Peppers Logo</title>
-						  <defs>
-							<path d="M50,250c0-110.5,89.5-200,200-200s200,89.5,200,200s-89.5,200-200,200S50,360.5,50,250" id="textcircle">
-							  <animateTransform
-								attributeName="transform"
-								begin="0s"
-								dur="30s"
-								type="rotate"
-								from="0 250 250"
-								to="360 250 250"
-								repeatCount="indefinite"
-							  />
-							</path>
-		  
-						  </defs>
-		  
-						  <use xlinkHref="#redstripe" transform="rotate(90 250 250)" />
-						  <use xlinkHref="#redstripe" transform="rotate(45 250 250)" />
-						  <use xlinkHref="#redstripe" transform="rotate(-45 250 250)" />
-						  <text dy="70" textLength="1220">
-		  
-							<textPath xlinkHref="#textcircle">Execom 2020 * Execom 2020 *</textPath>
-						  </text>
-						</svg>
-					  </div>
-					  <div className="imgBx">
-						<img src="https://images.unsplash.com/photo-1532123675048-773bd75df1b4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" alt="images"></img>
-					  </div>
-					  <div className="detail">
-						<h2>Priyadharshini P
-						</h2>
-					  </div>
-					  <div className="details">
-						<h2>Priyadharshini P
-						  <span>CHAIR
-						  </span></h2>
-						<a href="#" class="fa fa-linkedin"></a>
-						<a href="#" class="fa fa-envelope"></a>
-					  </div>
-					</div>
-					<div className="excomCard">
-					  <div className="rot">
-						<svg xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 500 500">
-						  <title>Red Hot Chilli Peppers Logo</title>
-						  <defs>
-							<path d="M50,250c0-110.5,89.5-200,200-200s200,89.5,200,200s-89.5,200-200,200S50,360.5,50,250" id="textcircle">
-							  <animateTransform
-								attributeName="transform"
-								begin="0s"
-								dur="30s"
-								type="rotate"
-								from="0 250 250"
-								to="360 250 250"
-								repeatCount="indefinite"
-							  />
-							</path>
-		  
-						  </defs>
-		  
-						  <use xlinkHref="#redstripe" transform="rotate(90 250 250)" />
-						  <use xlinkHref="#redstripe" transform="rotate(45 250 250)" />
-						  <use xlinkHref="#redstripe" transform="rotate(-45 250 250)" />
-						  <text dy="70" textLength="1220">
-		  
-							<textPath xlinkHref="#textcircle">Execom 2020 * Execom 2020 *</textPath>
-						  </text>
-						</svg>
-					  </div>
-					  <div className="imgBx">
-						<img src="https://images.unsplash.com/photo-1532123675048-773bd75df1b4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" alt="images"></img>
-					  </div>
-					  <div className="detail">
-						<h2>Akshaya S
-						</h2>
-					  </div>
-					  <div className="details">
-						<h2>Akshaya S
-						  <span>VICE CHAIR
-		  
-						  </span></h2>
-						<a href="#" class="fa fa-linkedin"></a>
-						<a href="#" class="fa fa-envelope"></a>
-					  </div>
-					</div>
-		  
-		  
-		  
-		  
-				  </div>
-				  <div className="box">
-					<div className="excomCard">
-					  <div className="rot">
-						<svg xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 500 500">
-						  <title>Red Hot Chilli Peppers Logo</title>
-						  <defs>
-							<path d="M50,250c0-110.5,89.5-200,200-200s200,89.5,200,200s-89.5,200-200,200S50,360.5,50,250" id="textcircle">
-							  <animateTransform
-								attributeName="transform"
-								begin="0s"
-								dur="30s"
-								type="rotate"
-								from="0 250 250"
-								to="360 250 250"
-								repeatCount="indefinite"
-							  />
-							</path>
-		  
-						  </defs>
-		  
-						  <use xlinkHref="#redstripe" transform="rotate(90 250 250)" />
-						  <use xlinkHref="#redstripe" transform="rotate(45 250 250)" />
-						  <use xlinkHref="#redstripe" transform="rotate(-45 250 250)" />
-						  <text dy="70" textLength="1220">
-		  
-							<textPath xlinkHref="#textcircle">Execom 2020 * Execom 2020 *</textPath>
-						  </text>
-						</svg>
-					  </div>
-					  <div className="imgBx">
-						<img src="https://images.unsplash.com/photo-1532123675048-773bd75df1b4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" alt="images"></img>
-					  </div>
-					  <div className="detail">
-						<h2>Sivapriya B
-						</h2>
-					  </div>
-					  <div className="details">
-						<h2>Sivapriya B
-						  <span>SECRETARY
-						  </span></h2>
-						<a href="#" class="fa fa-linkedin"></a>
-						<a href="#" class="fa fa-envelope"></a>
-					  </div>
-					</div>
-					<div className="excomCard">
-					  <div className="rot">
-						<svg xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 500 500">
-						  <title>Red Hot Chilli Peppers Logo</title>
-						  <defs>
-							<path d="M50,250c0-110.5,89.5-200,200-200s200,89.5,200,200s-89.5,200-200,200S50,360.5,50,250" id="textcircle">
-							  <animateTransform
-								attributeName="transform"
-								begin="0s"
-								dur="30s"
-								type="rotate"
-								from="0 250 250"
-								to="360 250 250"
-								repeatCount="indefinite"
-							  />
-							</path>
-		  
-						  </defs>
-		  
-						  <use xlinkHref="#redstripe" transform="rotate(90 250 250)" />
-						  <use xlinkHref="#redstripe" transform="rotate(45 250 250)" />
-						  <use xlinkHref="#redstripe" transform="rotate(-45 250 250)" />
-						  <text dy="70" textLength="1220">
-		  
-							<textPath xlinkHref="#textcircle">Execom 2020 * Execom 2020 *</textPath>
-						  </text>
-						</svg>
-					  </div>
-					  <div className="imgBx">
-						<img src="https://images.unsplash.com/photo-1532123675048-773bd75df1b4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" alt="images"></img>
-					  </div>
-					  <div className="detail">
-						<h2>Divya V
-						</h2>
-					  </div>
-					  <div className="details">
-						<h2>Divya V
-						  <span>JOINT SECRETARY
-		  
-						  </span></h2>
-						<a href="#" class="fa fa-linkedin"></a>
-						<a href="#" class="fa fa-envelope"></a>
-					  </div>
-					</div>
-					<div className="excomCard">
-					  <div className="rot">
-						<svg xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 500 500">
-						  <title>Red Hot Chilli Peppers Logo</title>
-						  <defs>
-							<path d="M50,250c0-110.5,89.5-200,200-200s200,89.5,200,200s-89.5,200-200,200S50,360.5,50,250" id="textcircle">
-							  <animateTransform
-								attributeName="transform"
-								begin="0s"
-								dur="30s"
-								type="rotate"
-								from="0 250 250"
-								to="360 250 250"
-								repeatCount="indefinite"
-							  />
-							</path>
-		  
-						  </defs>
-		  
-						  <use xlinkHref="#redstripe" transform="rotate(90 250 250)" />
-						  <use xlinkHref="#redstripe" transform="rotate(45 250 250)" />
-						  <use xlinkHref="#redstripe" transform="rotate(-45 250 250)" />
-						  <text dy="70" textLength="1220">
-		  
-							<textPath xlinkHref="#textcircle">Execom 2020 * Execom 2020 *</textPath>
-						  </text>
-						</svg>
-					  </div>
-					  <div className="imgBx">
-						<img src="https://images.unsplash.com/photo-1532123675048-773bd75df1b4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" alt="images"></img>
-					  </div>
-					  <div className="detail">
-						<h2>Dhini Shekinah Albert
-						</h2>
-					  </div>
-					  <div className="details">
-						<h2>Dhini Shekinah Albert
-						  <span>TREASURER
-						  </span></h2>
-						<a href="#" class="fa fa-linkedin"></a>
-						<a href="#" class="fa fa-envelope"></a>
-					  </div>
-					</div>
-		  
-		  
-		  
-		  
-				  </div>
-				</div>
-			  </div>
-		
-			  
-			  
-			  
-					  
-					 
+			</p>
+			<hr>
 
-		</main>
-		<script src="js/demo.js"></script>
-		<script src="js/three.min.js"></script>
-		<script src="js/TweenMax.min.js"></script>
-		<script src="js/demo1.js"></script>
-		
-	</body>
+			<h2>
+				VISION
+			</h2>
+			<p>To reimagine and reinvent technology in ways that help to build a fulfilling world, especially including
+				the aspects of education, the community and the environment.
+
+			</p>
+			<hr>
+			<h2>Mission</h2>
+			<p class="ptag">Our mission is to nurture and promote technological upheaval, meaningful innovation and
+				excellence far and wide. To help inspire and accelerate the advent of augmented technological progress
+				by producing and providing adequate tools as well as unprecedented value and opportunity for people,
+				irrespective of their level of learning. To be the world's foremost provider of enriching technical
+				information and tailored services to computing professionals throughout the world.</p>
+
+			<hr>
+
+			<h2>Excom Members </h2>
+
+		</div>
+		<figure class="snip1515">
+			<div class="profile-image"><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/sample47.jpg"
+					alt="sample47" /></div>
+			<figcaption>
+				<h3>Fleece Marigold</h3>
+				<h4>Founder</h4>
+
+				<div class="icons"><a href="#"><i class="ion-social-reddit"></i></a>
+					<a href="#"> <i class="fa fa-linkedin"></i></a>
+					<a href="#"> <i class="fa fa-envelope"></i></a>
+				</div>
+			</figcaption>
+		</figure>
+		<figure class="snip1515">
+			<div class="profile-image"><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/sample83.jpg"
+					alt="sample83" /></div>
+			<figcaption>
+				<h3>Norman Gordon</h3>
+				<h4>Web Designer</h4>
+
+				<div class="icons"><a href="#"><i class="ion-social-reddit"></i></a>
+					<a href="#"> <i class="fa fa-linkedin"></i></a>
+					<a href="#"> <i class="fa fa-envelope"></i></a>
+				</div>
+			</figcaption>
+		</figure>
+		<figure class="snip1515">
+			<div class="profile-image"><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/sample70.jpg"
+					alt="sample70" /></div>
+			<figcaption>
+				<h3>Ruby Von Rails</h3>
+				<h4>Public Relations</h4>
+
+				<div class="icons"><a href="#"><i class="ion-social-reddit"></i></a>
+					<a href="#"> <i class="fa fa-linkedin"></i></a>
+					<a href="#"> <i class="fa fa-envelope"></i></a>
+				</div>
+			</figcaption>
+		</figure>
+		<figure class="snip1515">
+			<div class="profile-image"><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/sample47.jpg"
+					alt="sample47" /></div>
+			<figcaption>
+				<h3>Fleece Marigold</h3>
+				<h4>Founder</h4>
+
+				<div class="icons"><a href="#"><i class="ion-social-reddit"></i></a>
+					<a href="#"> <i class="fa fa-linkedin"></i></a>
+					<a href="#"> <i class="fa fa-envelope"></i></a>
+				</div>
+			</figcaption>
+		</figure>
+		<figure class="snip1515">
+			<div class="profile-image"><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/sample83.jpg"
+					alt="sample83" /></div>
+			<figcaption>
+				<h3>Norman Gordon</h3>
+				<h4>Web Designer</h4>
+
+				<div class="icons"><a href="#"><i class="ion-social-reddit"></i></a>
+					<a href="#"> <i class="fa fa-linkedin"></i></a>
+					<a href="#"> <i class="fa fa-envelope"></i></a>
+				</div>
+			</figcaption>
+		</figure>
+		<figure class="snip1515">
+			<div class="profile-image"><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/sample70.jpg"
+					alt="sample70" /></div>
+			<figcaption>
+				<h3>Ruby Von Rails</h3>
+				<h4>Public Relations</h4>
+
+				<div class="icons"><a href="#"><i class="ion-social-reddit"></i></a>
+					<a href="#"> <i class="fa fa-linkedin"></i></a>
+					<a href="#"> <i class="fa fa-envelope"></i></a>
+				</div>
+			</figcaption>
+		</figure>
+
+
+
+
+	</main>
+	<script src="js/demo.js"></script>
+	<script src="js/three.min.js"></script>
+	<script src="js/TweenMax.min.js"></script>
+	<script src="js/demo1.js"></script>
+
+</body>
 
 </html>
