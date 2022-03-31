@@ -2,25 +2,18 @@
 <html lang="en" class="no-js">
 
 <head>
-	<meta charset="UTF-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Decorative WebGL Backgrounds | Demo 4 | Codrops</title>
-	<meta name="description"
-		content="A collection of decorative animated background shapes powered by WebGL and TweenMax." />
-	<meta name="keywords" content="webgl, background, shape, web design, web development, tweenmax, gsap, animation" />
-	<meta name="author" content="Louis Hoebregts for Codrops" />
-	<link rel="shortcut icon" href="favicon.ico">
+	<link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css" />
 	<link href="https://fonts.googleapis.com/css?family=Barlow:400,500,700" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="css/base.css" />
-	<link rel="stylesheet" type="text/css" href="css/demo4.css" />
+	<link rel="stylesheet" type="text/css" href="css/demo2.css" />
 	<link rel="stylesheet" type="text/css" href="pater/pater.css" />
-
+	<title>Robotics and Automation Society</title>
 	<!--Pointer mounse-->
-<link rel="stylesheet" href="https://unpkg.com/kursor/dist/kursor.css">
+	<link rel="stylesheet" href="https://unpkg.com/kursor/dist/kursor.css">
 	<script>document.documentElement.className = "js"; var supportsCssVars = function () { var e, t = document.createElement("style"); return t.innerHTML = "root: { --tmp-var: bold; }", document.head.appendChild(t), e = !!(window.CSS && window.CSS.supports && window.CSS.supports("font-weight", "var(--tmp-var)")), t.parentNode.removeChild(t), e }; supportsCssVars() || alert("Please view this demo in a modern browser that supports CSS Variables.");</script>
 </head>
 
-<body class="demo-4">
+<body class="demo-2">
 	<svg class="hidden">
 		<symbol id="icon-arrow" viewBox="0 0 24 24">
 			<title>arrow</title>
@@ -62,7 +55,7 @@
 							<use xlink:href="#icon-arrow"></use>
 						</svg></a>
 				</div>
-				<a href="index.html" class="codrops-header__title">BACK</a>
+				<a href="socities.html" class="codrops-header__title">BACK</a>
 			</header>
 			<!-- <a class="github" href="https://github.com/Mamboleoo/DecorativeBackgrounds/" title="Find this project on GitHub"><svg class="icon icon--github"><use xlink:href="#icon-github"></use></svg></a> -->
 
@@ -71,40 +64,68 @@
 
 		<div class="content">
 			<canvas class="scene scene--full" id="scene"></canvas>
+			<script type="x-shader/x-vertex" id="wrapVertexShader">
+					#define PI 3.1415926535897932384626433832795
+					attribute float size;
+					void main() {
+						vec4 mvPosition = modelViewMatrix * vec4( position, 1.0 );
+						gl_PointSize = 3.0;
+						gl_Position = projectionMatrix * mvPosition;
+					}
+				</script>
+			<script type="x-shader/x-fragment" id="wrapFragmentShader">
+					uniform sampler2D texture;
+					void main(){
+						vec4 textureColor = texture2D( texture, gl_PointCoord );
+						if ( textureColor.a < 0.3 ) discard;
+						vec4 dotColor = vec4(0.06, 0.18, 0.36, 0.4);
+						vec4 color = dotColor * textureColor;
+						gl_FragColor = color;
+					}
+				</script>
 			<div class="content__inner">
-				<h2 class="content__title">Power Electronics </h2>
+				<h2 class="content__title">Robotics and Automation </h2>
 				<h3 class="content__subtitle">Society</h2>
 			</div>
 		</div>
+
 		<div class="context">
 			<hr class="line">
 			<h2>
-				About </h2>
-			<p class="ptag">
-				The Power Electronics Society (PELS) is one of the fastest-growing technical societies of the Institute
-				of Electrical and Electronics Engineers (IEEE). This technology encompasses the effective use of
-				electronic components, the application of circuit theory and design techniques, and the development of
-				analytical tools toward efficient conversion, control, and condition of electric power.
-
-			</p>
+				ABOUT </h2>
+			<P class="ptag">The IEEE Robotics and Automation strives for the advancement of the theory and practice of
+				robotics and automation engineering and science and of the allied arts and sciences, and for the
+				maintenance of high professional standards among its members.
+			</P>
 			<hr class="line">
 
-			<h2>
-				Vision
+			<h2>Vision
+
 			</h2>
-			<p class="ptag"> PELS strives to educate its members about the latest technologies and other advances in
-				power electronics to keep them competitive in the workplace, as well as to provide them with the tools
-				they need to grow both personally and professionally.</p>
+			<p class="ptag">
+				Our Vision is to be the most recognized and respected global organization in Robotics and Automation.
+
+			</p>
+
 			<hr class="line">
 
 			<h2>Mission</h2>
-			<p class="ptag"> The PELS aims to promote electrical and electronics engineering and the allied arts and
-				sciences, and to foster a high level of technical excellence among its members. The PELS promotes close
-				collaboration between its members and holds meetings for its members. </p>
+			<p class="ptag">
+				•Our Mission is to foster the development and facilitate the exchange of scientific and technological
+				knowledge in Robotics and Automation that benefits members, the profession and humanity.<br />
+				•To focus on systems incorporating sensors and actuators that operate autonomously or semi-autonomously
+				in cooperation with humans.<br />
+				•To emphasize intelligence and adaptability to cope with unstructured environment in Robotics.<br />
+				• To emphasize efficiency, productivity, quality, and reliability, focusing on systems that operate
+				autonomously, often in structured environments over extended periods, and on the explicit structuring of
+				such environments in Automation.<br />
+
+			</p>
 
 			<hr class="line">
 
 			<h2>Excom Members</h2>
+
 			<figure class="snip1515">
 				<div class="profile-image"><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/sample47.jpg"
 						alt="sample47" /></div>
@@ -185,24 +206,19 @@
 			</figure>
 
 
-
-
-		</div>
 	</main>
 	<script src="js/demo.js"></script>
 	<script src="js/three.min.js"></script>
-	<script src="js/perlin.js"></script>
 	<script src="js/TweenMax.min.js"></script>
-	<script src="js/demo4.js"></script>
-
+	<script src="js/demo2.js"></script>
 	<script src="https://unpkg.com/kursor"></script>
-    <script>
-        new kursor({
-            type: 1,
-            removeDefaultCursor: true,
-            color: '#edfce6'
-        })
-    </script>
+	<script>
+		new kursor({
+			type: 1,
+			removeDefaultCursor: true,
+			color: '#020302'
+		})
+	</script>
 </body>
 
 </html>

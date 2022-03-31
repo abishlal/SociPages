@@ -2,10 +2,17 @@
 <html lang="en" class="no-js">
 
 <head>
-
-	<link href="https://fonts.googleapis.com/css?family=Barlow:400,500,700" rel="stylesheet">
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Electron Devices Society</title>
+	<meta name="description"
+		content="A collection of decorative animated background shapes powered by WebGL and TweenMax." />
+	<meta name="keywords" content="webgl, background, shape, web design, web development, tweenmax, gsap, animation" />
+	<meta name="author" content="Louis Hoebregts for Codrops" />
+	<link rel="shortcut icon" href="favicon.ico">
+	<link href="https://fonts.googleapis.com/css?family=Barlow:400,500,700|Poppins:600" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="css/base.css" />
-	<link rel="stylesheet" type="text/css" href="css/demo2.css" />
+	<link rel="stylesheet" type="text/css" href="css/demo3.css" />
 	<link rel="stylesheet" type="text/css" href="pater/pater.css" />
 
 	<!--Pointer mounse-->
@@ -14,7 +21,7 @@
 	<script>document.documentElement.className = "js"; var supportsCssVars = function () { var e, t = document.createElement("style"); return t.innerHTML = "root: { --tmp-var: bold; }", document.head.appendChild(t), e = !!(window.CSS && window.CSS.supports && window.CSS.supports("font-weight", "var(--tmp-var)")), t.parentNode.removeChild(t), e }; supportsCssVars() || alert("Please view this demo in a modern browser that supports CSS Variables.");</script>
 </head>
 
-<body class="demo-2">
+<body class="demo-3">
 	<svg class="hidden">
 		<symbol id="icon-arrow" viewBox="0 0 24 24">
 			<title>arrow</title>
@@ -56,7 +63,7 @@
 							<use xlink:href="#icon-arrow"></use>
 						</svg></a>
 				</div>
-				<a href="index.html" class="codrops-header__title">BACK</a>
+				<a href="socities.html" class="codrops-header__title">BACK</a>
 			</header>
 			<!-- <a class="github" href="https://github.com/Mamboleoo/DecorativeBackgrounds/" title="Find this project on GitHub"><svg class="icon icon--github"><use xlink:href="#icon-github"></use></svg></a> -->
 
@@ -65,88 +72,72 @@
 
 		<div class="content">
 			<canvas class="scene scene--full" id="scene"></canvas>
-			<script type="x-shader/x-vertex" id="wrapVertexShader">
-					#define PI 3.1415926535897932384626433832795
-					attribute float size;
-					void main() {
-						vec4 mvPosition = modelViewMatrix * vec4( position, 1.0 );
-						gl_PointSize = 3.0;
-						gl_Position = projectionMatrix * mvPosition;
-					}
-				</script>
-			<script type="x-shader/x-fragment" id="wrapFragmentShader">
-					uniform sampler2D texture;
-					void main(){
-						vec4 textureColor = texture2D( texture, gl_PointCoord );
-						if ( textureColor.a < 0.3 ) discard;
-						vec4 dotColor = vec4(0.06, 0.18, 0.36, 0.4);
-						vec4 color = dotColor * textureColor;
-						gl_FragColor = color;
-					}
-				</script>
 			<div class="content__inner">
-				<h2 class="content__title">Communications</h2>
+				<h2 class="content__title">Electron Devices</h2>
 				<h3 class="content__subtitle">Society</h2>
+
 			</div>
 		</div>
 		<div class="context">
-			<hr>
+			<hr class="line">
 			<h2>
 				About
-
 			</h2>
 			<p class="ptag">
-				The IEEE Communications Society fosters communications-related research, technology, and engineering. It
-				encourages its members and the technical community throughout the world to present and exchange
-				information.
+				The IEEE EDS constitution states that its Field of Interest is "all aspects of engineering, physics,
+				theory, experiment and simulation of electron and ion devices involving insulators, metals, organic
+				materials, plasmas, semiconductors, quantum-effect materials, vacuum and emerging material.
 
 
 			</p>
-			<hr>
+			<hr class="line">
 
 			<h2>
 				Vision
 			</h2>
-			<p class="ptag">Through communications and networking technology research, application, teaching, and
-				incubation of new ideas, bring the globe together in harmony.
+			<p class="ptag"> Promoting excellence in the field of electron devices for the benefit of humanity
 			</p>
-			<hr>
+			<hr class="line">
 
-			<h2>Mission</h2>
-			<p class="ptag"> Through communications and networking technology research, application, teaching, and
-				incubation of new ideas, bring the globe together in harmony.</p>
+			<h2>At college level</h2>
+			<p class="ptag">To foster professional growth of its members by satisfying their needs for easy access to
+				and exchange of technical information, publishing, education, and technical recognition and enhancing
+				public visibility in the field of Electron Devices.
+			</p>
 
-			<hr>
+			<hr class="line">
 
 			<h2>Excom Members</h2>
-			<div className="com society">
+
+			<div className="Electron Devices Society">
+			
 				<table>
 					<tr>
 						<th>NAME OF STUDENT</th>
 						<th>POST ASSIGNED</th>
 					</tr>
 					<tr>
-						<td>VIGNESH D </td>
+						<td>RHAGUL D</td>
 						<td>CHAIRMAN</td>
 					</tr>
 					<tr>
-						<td>SRIMATHI J</td>
+						<td>LEE MANOJ DARSHAN N</td>
 						<td>SECRETARY</td>
 					</tr>
 					<tr>
-						<td>SRINIVEDHINIV V</td>
+						<td>AMALWIN ASEER S</td>
 						<td>TREASURER</td>
 					</tr>
 				</table>
 			</div>
 
-
 		</div>
 	</main>
 	<script src="js/demo.js"></script>
 	<script src="js/three.min.js"></script>
+	<script src="js/perlin.js"></script>
 	<script src="js/TweenMax.min.js"></script>
-	<script src="js/demo2.js"></script>
+	<script src="js/demo3.js"></script>
 
 	<script src="https://unpkg.com/kursor"></script>
     <script>
